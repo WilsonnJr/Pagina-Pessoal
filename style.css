@@ -1,0 +1,130 @@
+/* Reset básico para garantir que todos os navegadores tenham uma base semelhante */
+* {
+    margin: 0;/* Remove as margens padrão de todos os elementos */
+    padding: 0; /* Remove o espaçamento interno padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui padding e borda na largura e altura dos elementos */
+}
+
+/* Estilos do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    background-color: #050517; /* Cor de fundo */
+    color: white; /* Cor do texto em branco */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+/* Estilizando o cabeçalho */
+header {
+    background: #1a1c26; /* Nova cor de fundo do cabeçalho */
+    color: white; /* Cor do texto em branco */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza texto */
+}
+
+/* Estilo da imagem no cabeçalho (se necessário) */
+.header-img {
+    position: absolute; /* Posiciona a imagem em relação ao cabeçalho */
+    top: 20px; /* Distância do topo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centralizar */
+    border-radius: 50%; /* Borda arredondada */
+    border: 4px solid #EFC88B; /* Borda ao redor da imagem */
+    width: 80px; /* Largura da imagem */
+    height: 80px; /* Altura da imagem */
+}
+
+/* Estilizando o menu de navegação */
+nav {
+    display: flex; /* Utiliza flexbox para o layout do menu */
+    justify-content: center; /* Centraliza os links */
+    gap: 15px; /* Espaçamento entre os links */
+}
+
+nav a {
+    color: white; /* Define a cor dos links como branco */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 10px 15px; /* Adiciona espaço interno aos links */
+    border-radius: 5px; /* Arredonda as bordas dos links */
+    transition: background 0.3s; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+nav a:hover {
+    background: rgba(239, 200, 139, 0.2); /* Muda a cor de fundo quando o mouse passa por cima */
+}
+
+/* Estilizando o conteúdo principal */
+main {
+    max-width: 800px; /* Largura máxima do conteúdo */
+    margin: 20px auto; /* Centraliza o main na página */
+    padding: 20px; /* Espaçamento interno */
+    background: #1a1c26; /* Cor de fundo do conteúdo */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilizando as seções */
+section {
+    margin-bottom: 20px; /* Espaçamento entre as seções */
+}
+
+/* Estilizando a imagem */
+.home-img {
+    display: flex; /* Utiliza flexbox para centralizar a imagem */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.home-img img {
+    max-width: 100%; /* Imagem responsiva */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilizando os ícones sociais */
+.icones-sociais {
+    display: flex; /* Utiliza flexbox para os ícones */
+    justify-content: center; /* Centraliza os ícones */
+    gap: 20px; /* Espaçamento entre os ícones */
+    margin: 20px 0; /* Espaçamento superior e inferior */
+}
+
+.icones-sociais a {
+    color: #EFC88B; /* Cor dos ícones */
+    font-size: 24px; /* Tamanho dos ícones */
+    transition: color 0.3s; /* Transição suave para a mudança de cor */
+}
+
+.icones-sociais a:hover {
+    color: white; /* Cor dos ícones ao passar o mouse */
+}
+
+/* Estilização do link "Contrate-me" */
+a[href*="mail.google.com"] {
+    display: block; /* Faz o link ocupar toda a largura disponível */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px auto; /* Centraliza o link na página */
+    padding: 10px; /* Espaçamento interno */
+    background: #EFC88B; /* Cor de fundo */
+    color: #050517; /* Cor do texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado */
+    max-width: 200px; /* Largura máxima do botão */
+}
+
+a[href*="mail.google.com"]:hover {
+    background: #EFC88B; /* Mantém a mesma cor de fundo ao passar o mouse */
+    color: #050517; /* Cor do texto permanece */
+}
+
+/* Adiciona regras para telas pequenas (menos de 600px de largura), mudando o layout dos links e ícones para uma coluna, facilitando a navegação.*/
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Alinha os links verticalmente em telas pequenas */
+    }
+
+    nav a {
+        margin-bottom: 10px; /* Espaçamento inferior entre os links */
+    }
+
+    .icones-sociais {
+        flex-direction: column; /* Alinha os ícones verticalmente em telas pequenas */
+    }
+}
